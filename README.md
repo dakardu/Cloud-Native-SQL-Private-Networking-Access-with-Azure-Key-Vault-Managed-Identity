@@ -323,6 +323,14 @@ const config = {
 
 ---
 
+## 🔐 Security Notes
+
+No credentials are stored in this repository.
+All secrets are managed securely through Azure Key Vault and accessed using Managed Identity.
+Any values used during this lab were temporary and have been destroyed.
+
+---
+
 ## 🚀 Mejoras futuras
 
 - Terraform
