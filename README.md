@@ -234,10 +234,35 @@ Permisos:
 
 - Autentícame en Azure usando la identidad de la VM y tráeme el secreto db-password desde Key Vault
 
+- Instalamos las varibles desde la libreria SDK de Azure
+
+```bash
+npm install @azure/identity @azure/keyvault-secrets
+
+```
+
 ```js
 const { DefaultAzureCredential } = require("@azure/identity");
+```
+
+- Es la librería del SDK que permite autenticarse con Azure:
+  👉 Esto usa:
+    - Managed Identity
+    - Azure CLI login
+    - Visual Studio login
+    - Environment variables
+
+```js
 const { SecretClient } = require("@azure/keyvault-secrets");
 ```
+
+- Es la librería para conectarte a Key Vault:
+  👉 Esto se usa:
+    - 🔐 Obtener secretos desde Azure Key Vault
+        - Credenciales de base de datos
+        - Connection strings
+        - API keys
+        - Tokens
 
 ---
 
